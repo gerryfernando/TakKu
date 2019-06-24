@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TakKu</string>
+    <string name="icon_title">TAK-Ku</string>
+    <string name="icon_title_detail">Ikuti event &amp; kumpulkan TAK</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="icon">icon</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password">Password</string>
+</resources>
