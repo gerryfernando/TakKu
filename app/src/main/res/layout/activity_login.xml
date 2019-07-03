@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="#FFF"
     tools:context=".LoginActivity">
 
@@ -42,6 +41,7 @@
 
         <TextView
             style="@style/TextContent.IconTitle"
+            android:textSize="42sp"
             android:layout_toEndOf="@id/iv_icon"
             android:text="@string/icon_title" />
     </RelativeLayout>

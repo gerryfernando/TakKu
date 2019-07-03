@@ -34,7 +34,6 @@
     </style>
 
     <style name="TextContent.IconTitle">
-        <item name="android:textSize">42sp</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textStyle">bold</item>
     </style>
