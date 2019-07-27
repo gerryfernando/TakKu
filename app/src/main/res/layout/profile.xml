@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/navbar-profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#565A97"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="9dp"
+            android:background="#565A97"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bgprofil"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/fotoprofil"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="90dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logofoto"
+            android:layout_marginTop="115dp"
+            android:layout_marginLeft="165dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            text/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:textSize="24dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29 TAK (Pemula)"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+
+        <Button
+            style="@style/ButtonGeneral"
+            android:text="EDIT PROFILE"
+            android:backgroundTint="#67D8C8"
+            android:layout_marginBottom="24dp"
+            android:textSize="20dp"  />
+
+        <Button
+            style="@style/ButtonGeneral"
+            android:text="LOGOUT"
+            android:textSize="20dp"
+            android:backgroundTint="#EA6A6A"/>
+
+
+ </LinearLayout>
+
+
+
+</RelativeLayout>
