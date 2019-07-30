@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+
     <LinearLayout
         android:id="@+id/navbar-profile"
         android:layout_width="match_parent"
@@ -115,7 +116,6 @@
         android:backgroundTint="#67D8C8"
         android:layout_marginBottom="24dp"
         android:textSize="20dp"  />
-
 
 
 </LinearLayout>

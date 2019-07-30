@@ -17,6 +17,8 @@ import com.motion.takku.Fragment.RankFragment;
  public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNav;
     private String title = "TAK-Ku";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
