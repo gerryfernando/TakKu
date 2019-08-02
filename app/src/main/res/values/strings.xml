@@ -15,5 +15,6 @@
     <string name="home">Home</string>
     <string name="events">Events</string>
     <string name="rank">Rank</string>
+
     <string name="profile">Profile</string>
 </resources>
