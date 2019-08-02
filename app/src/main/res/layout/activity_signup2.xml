@@ -25,7 +25,7 @@
         android:id="@+id/tv_signup_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="14dp"
         android:text="@string/signup"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
@@ -111,7 +111,7 @@
                 android:id="@+id/tv_select_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select Photo"
+                android:text="@string/select_photo"
                 android:textSize="18sp"
                 android:drawableTop="@drawable/ic_plus_blue"
                 android:drawablePadding="7dp"/>
@@ -145,14 +145,14 @@
 
                 <EditText
                     style="@style/TextContent.EditLogin"
-                    android:hint="Target TAK"
+                    android:hint="@string/target_tak"
                     android:inputType="numberDecimal" />
 
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="62dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape_item"
                 android:backgroundTint="@color/colorAccent"
@@ -162,7 +162,7 @@
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="62dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape_item"
                 android:backgroundTint="@color/redPrimary"

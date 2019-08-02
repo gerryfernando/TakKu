@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".Signup2Activity" />
-        <activity android:name=".Signup1Activity" />
+        <activity android:name=".Signup2Activity"
+            android:theme="@style/AppTheme.CustomActivityAnimation"/>
+        <activity android:name=".Signup1Activity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

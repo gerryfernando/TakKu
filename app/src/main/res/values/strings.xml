@@ -18,4 +18,12 @@
     <string name="profile">Profile</string>
     <string name="full_name">Nama Lengkap</string>
     <string name="submit">Submit</string>
+    <string name="input_tak">Input TAK</string>
+    <string name="event_name">Nama Acara</string>
+    <string name="organizer">Penyelenggara</string>
+    <string name="date_event">Tanggal</string>
+    <string name="total_tak">Jumlah TAK</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="target_tak">Target TAK</string>
+    <string name="evidence_upload">Upload Bukti</string>
 </resources>
