@@ -16,15 +16,12 @@ import com.motion.takku.Fragment.RankFragment;
 
  public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNav;
-    private String title = "TAK-Ku";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        initToolbar(title);
 
         bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -41,23 +38,15 @@ import com.motion.takku.Fragment.RankFragment;
                     switch (item.getItemId()) {
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
-                            title = "TAK-Ku";
-                            initToolbar(title);
                             break;
                         case R.id.nav_event:
                             selectedFragment = new EventsFragment();
-                            title = "Events";
-                            initToolbar(title);
                             break;
                         case R.id.nav_rank:
                             selectedFragment = new RankFragment();
-                            title = "Rank";
-                            initToolbar(title);
                             break;
                         case R.id.nav_profile:
                             selectedFragment = new ProfleFragment();
-                            title = "Profile";
-                            initToolbar(title);
                             break;
                     }
 
@@ -67,12 +56,6 @@ import com.motion.takku.Fragment.RankFragment;
                     return true;
                 }
             };
-
-    public void initToolbar(String title){
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(title);
-    }
 
 
  }
