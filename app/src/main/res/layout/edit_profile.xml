@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <!--
+
     <LinearLayout
         android:id="@+id/navbar-profile"
         android:layout_width="match_parent"
@@ -118,5 +118,4 @@
         android:textSize="20dp"  />
 
 
--->
 </LinearLayout>
