@@ -9,13 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.motion.takku.R;
 
-public class ProfleFragment extends Fragment {
+public class ProfileFragment extends Fragment {
     Toolbar mtoolbar;
 
-    public ProfleFragment() {
+    Button btnEditProfile, Logout;
+
+    public ProfileFragment() {
     }
 
     @Nullable
@@ -26,6 +29,19 @@ public class ProfleFragment extends Fragment {
         mtoolbar = view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(mtoolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Profile");
+
+        btnEditProfile = view.findViewById(R.id.btn_editprofile);
+
+        btnEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction().
+                        replace(R.id.fragment_container, new EditProfileFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         return view;
     }

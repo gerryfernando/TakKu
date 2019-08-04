@@ -5,13 +5,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.motion.takku.Fragment.EventsFragment;
 import com.motion.takku.Fragment.HomeFragment;
-import com.motion.takku.Fragment.ProfleFragment;
+import com.motion.takku.Fragment.ProfileFragment;
 import com.motion.takku.Fragment.RankFragment;
 
  public class MainActivity extends AppCompatActivity {
@@ -46,7 +44,7 @@ import com.motion.takku.Fragment.RankFragment;
                             selectedFragment = new RankFragment();
                             break;
                         case R.id.nav_profile:
-                            selectedFragment = new ProfleFragment();
+                            selectedFragment = new ProfileFragment();
                             break;
                     }
 
