@@ -27,7 +27,7 @@ public class EditProfileFragment extends Fragment {
 
         mtoolbar = view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(mtoolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Profile");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Edit Profile");
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
         mtoolbar.setNavigationOnClickListener(new View.OnClickListener() {

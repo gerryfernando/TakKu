@@ -1,5 +1,6 @@
 package com.motion.takku.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,12 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.motion.takku.LoginActivity;
+import com.motion.takku.MainActivity;
 import com.motion.takku.R;
 
 public class ProfileFragment extends Fragment {
     Toolbar mtoolbar;
 
-    Button btnEditProfile, Logout;
+    Button btnEditProfile, btnLogout;
 
     public ProfileFragment() {
     }
@@ -31,6 +34,7 @@ public class ProfileFragment extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Profile");
 
         btnEditProfile = view.findViewById(R.id.btn_editprofile);
+        btnLogout = view.findViewById(R.id.btn_logout);
 
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +44,15 @@ public class ProfileFragment extends Fragment {
                         replace(R.id.fragment_container, new EditProfileFragment())
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
 
