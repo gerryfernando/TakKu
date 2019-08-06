@@ -20,15 +20,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="158dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:padding="25dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <FrameLayout
             android:id="@+id/bg_profile_picture"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:background="@drawable/fotoprofil">
 
             <ImageView
@@ -64,7 +64,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/username_hint"
                     android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <View
                     android:layout_width="2dp"
@@ -79,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="@string/total_tak"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/greenPrimary"
                     android:textSize="20sp" />
 
 

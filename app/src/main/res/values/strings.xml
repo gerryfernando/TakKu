@@ -31,4 +31,10 @@
     <string name="edit_profile">EDIT PROFILE</string>
     <string name="logout">LOGOUT</string>
     <string name="update">UPDATE</string>
+    <string name="level">Level 0</string>
+    <string name="status">(Status)</string>
+    <string name="tak">TAK</string>
+    <string name="dummy_tak_1">29</string>
+    <string name="dummy_tak_2">/</string>
+    <string name="dummy_tak_3">60</string>
 </resources>
