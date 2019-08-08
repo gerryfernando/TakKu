@@ -37,4 +37,7 @@
     <string name="dummy_tak_1">29</string>
     <string name="dummy_tak_2">/</string>
     <string name="dummy_tak_3">60</string>
+    <string name="top_100">TOP 100</string>
+    <string name="dummy_name">Firman Ramdhani</string>
+    <string name="dummy_tak">1000 TAK</string>
 </resources>

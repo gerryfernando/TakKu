@@ -5,15 +5,27 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.motion.takku.Model.RankAdapter;
+import com.motion.takku.Model.User;
 import com.motion.takku.R;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class RankFragment extends Fragment {
-    Toolbar mtoolbar;
+    private Toolbar mtoolbar;
+    private RecyclerView rvRank;
+    private List<User> mListUser = new ArrayList<>();
 
     public RankFragment() {
     }
@@ -27,7 +39,36 @@ public class RankFragment extends Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(mtoolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rank");
 
+        rvRank = view.findViewById(R.id.rv_rank);
+        rvRank.setHasFixedSize(true);
+        rvRank.setNestedScrollingEnabled(false);
+        RankAdapter rankAdapter = new RankAdapter(getContext(), mListUser);
+        rvRank.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rvRank.setAdapter(rankAdapter);
+
+
         return view;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mListUser.add(new User("Hamad Fauzi Jesar", R.drawable.fotoprofil, R.drawable.rank_logo, 500, "Superman"));
+        mListUser.add(new User("Firman Ramdhani", R.drawable.fotoprofil, R.drawable.rank_logo, 1000, "The King"));
+        mListUser.add(new User("Yudha Alsepky", R.drawable.fotoprofil, R.drawable.rank_logo, 60, "Senior"));
+        mListUser.add(new User("Restu Assegaf", R.drawable.fotoprofil, R.drawable.rank_logo, 140, "Aktifis"));
+        mListUser.add(new User("Dedih Kurnia", R.drawable.fotoprofil, R.drawable.rank_logo, 480, "Superman"));
+        mListUser.add(new User("John Doe", R.drawable.fotoprofil, R.drawable.rank_logo, 29, "Pemula"));
+
+        Collections.sort(mListUser, new SortbyJumlahTak());
+    }
+
+    class SortbyJumlahTak implements Comparator<User> {
+
+        @Override
+        public int compare(User o1, User o2) {
+            return o2.getJumlah_tak() - o1.getJumlah_tak();
+        }
+    }
 }
