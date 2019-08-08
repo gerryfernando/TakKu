@@ -15,6 +15,7 @@
     <string name="home">Home</string>
     <string name="events">Events</string>
     <string name="rank">Rank</string>
+    <string name="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu accumsan mi. In gravida porttitor quam cursus aliquet. Donec ut ipsum id ipsum facilisis rutrum. Nulla dolor nisl, viverra eu congue vitae, facilisis a nulla. Ut efficitur eros a ipsum pretium, ut tempor ipsum rutrum. Nulla ligula arcu, luctus id risus nec, tristique eleifend orci.</string>
 
     <string name="profile">Profile</string>
 </resources>
