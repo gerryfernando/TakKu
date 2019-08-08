@@ -12,22 +12,31 @@ import android.view.ViewGroup;
 
 import com.motion.takku.R;
 
-public class EventsFragment extends Fragment {
+public class DetailTAKFragment extends Fragment {
     Toolbar mtoolbar;
 
-    public EventsFragment() {
+    public DetailTAKFragment() {
+
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_events, container, false);
+        View view = inflater.inflate(R.layout.fragment_detailtak, container, false);
 
         mtoolbar = view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(mtoolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Events");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Detail Tak");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        mtoolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+
 
         return view;
     }
-
 }

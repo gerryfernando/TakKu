@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margins"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="@dimen/activity_vertical_margins"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_inputtak_title"
+                    style="@style/TextContent.IconTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/input_tak"
+                    android:textSize="28sp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/et_inputtak_eventname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="14dp"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        style="@style/TextContent.EditLogin"
+                        android:hint="@string/event_name"
+                        android:inputType="text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/et_inputtak_organizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        style="@style/TextContent.EditLogin"
+                        android:hint="@string/organizer"
+                        android:inputType="text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/et_inputtak_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        style="@style/TextContent.EditLogin"
+                        android:drawableEnd="@drawable/ic_event"
+                        android:hint="@string/date_event"
+                        android:inputType="date"
+                        android:paddingEnd="18dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_inputtak_jumlahtak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            style="@style/TextContent.EditLogin"
+                            android:hint="@string/total_tak"
+                            android:inputType="numberDecimal" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="62dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_item"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="+"
+                        android:textColor="#FFF"
+                        android:textSize="34sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="62dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_item"
+                        android:backgroundTint="@color/redPrimary"
+                        android:text="-"
+                        android:textColor="#FFF"
+                        android:textSize="34sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_profile_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="152dp"
+                    android:background="@drawable/shape_item"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_select_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_plus_blue"
+                        android:drawablePadding="7dp"
+                        android:text="@string/evidence_upload"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_signup_submit"
+                    style="@style/ButtonGeneral"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="@string/submit" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

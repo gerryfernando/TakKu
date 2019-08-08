@@ -97,42 +97,17 @@
             android:text="EDIT PROFILE"
             android:backgroundTint="#67D8C8"
             android:layout_marginBottom="24dp"
-            android:textSize="20dp"
-            android:layout_marginRight="41dp"
-            android:layout_marginLeft="40dp"/>
+            android:textSize="20dp"  />
 
         <Button
             style="@style/ButtonGeneral"
             android:text="LOGOUT"
             android:textSize="20dp"
-            android:backgroundTint="#EA6A6A"
-            android:layout_marginRight="41dp"
-            android:layout_marginLeft="40dp"/>
+            android:backgroundTint="#EA6A6A"/>
 
 
  </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/botnav_divider"/>
 
-    <View
-        android:id="@+id/botnav_divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"
-        android:layout_above="@id/bottom_navigation"/>
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#FFF"
-        app:menu="@menu/bottom_navigation"
-        app:labelVisibilityMode="unlabeled"
-        app:itemIconSize="28dp"/>
 
 </RelativeLayout>
