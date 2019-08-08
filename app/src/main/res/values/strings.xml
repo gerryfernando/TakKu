@@ -15,6 +15,26 @@
     <string name="home">Home</string>
     <string name="events">Events</string>
     <string name="rank">Rank</string>
-
     <string name="profile">Profile</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="submit">Submit</string>
+    <string name="input_tak">Input TAK</string>
+    <string name="event_name">Nama Acara</string>
+    <string name="organizer">Penyelenggara</string>
+    <string name="date_event">Tanggal</string>
+    <string name="total_tak">Jumlah TAK</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="target_tak">Target TAK</string>
+    <string name="evidence_upload">Upload Bukti</string>
+    <string name="rank_position">Rank #00</string>
+    <string name="jumlah_tak_status">Jumlah TAK (Status)</string>
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="logout">LOGOUT</string>
+    <string name="update">UPDATE</string>
+    <string name="level">Level 0</string>
+    <string name="status">(Status)</string>
+    <string name="tak">TAK</string>
+    <string name="dummy_tak_1">29</string>
+    <string name="dummy_tak_2">/</string>
+    <string name="dummy_tak_3">60</string>
 </resources>

@@ -104,7 +104,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/red"
+            android:backgroundTint="@color/redPrimary"
             android:src="@drawable/minus"
             />
     </LinearLayout>

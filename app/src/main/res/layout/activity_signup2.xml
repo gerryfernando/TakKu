@@ -165,7 +165,7 @@
                 android:layout_height="62dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape_item"
-                android:backgroundTint="@color/red"
+                android:backgroundTint="@color/redPrimary"
                 android:text="-"
                 android:textSize="34sp"
                 android:textColor="#FFF"/>
