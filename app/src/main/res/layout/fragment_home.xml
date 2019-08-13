@@ -2,6 +2,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#FFF"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -25,11 +26,11 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
+            android:id="@+id/rl_profile_sampul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:padding="25dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:padding="25dp">
 
             <FrameLayout
                 android:id="@+id/bg_profile_picture"
@@ -144,6 +145,23 @@
 
         </RelativeLayout>
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_tak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_profile_sampul"
+            tools:listitem="@layout/item_row_tak"/>
+
     </RelativeLayout>
+    
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_home"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/plus"
+        app:fabSize="normal"/>
 
 </android.support.design.widget.CoordinatorLayout>

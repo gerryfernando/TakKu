@@ -35,10 +35,12 @@ public class RankFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_rank, container, false);
 
+        //initToolbar
         mtoolbar = view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(mtoolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rank");
 
+        //init RecyclerView
         rvRank = view.findViewById(R.id.rv_rank);
         rvRank.setHasFixedSize(true);
         rvRank.setNestedScrollingEnabled(false);

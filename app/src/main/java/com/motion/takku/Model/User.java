@@ -7,13 +7,22 @@ public class User {
     private int rank_logo_image;
     private int jumlah_tak;
     private String status;
-/**
     private String username;
     private String password;
     private String email;
     private int tak_target;
-**/
 
+    public User(String name, int profile_image, int rank_logo_image, int jumlah_tak, String status, String username, String password, String email, int tak_target) {
+        this.name = name;
+        this.profile_image = profile_image;
+        this.rank_logo_image = rank_logo_image;
+        this.jumlah_tak = jumlah_tak;
+        this.status = status;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.tak_target = tak_target;
+    }
 
     public User(String name, int profile_image, int rank_logo_image, int jumlah_tak, String status) {
         this.name = name;
@@ -61,5 +70,37 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getTak_target() {
+        return tak_target;
+    }
+
+    public void setTak_target(int tak_target) {
+        this.tak_target = tak_target;
     }
 }
