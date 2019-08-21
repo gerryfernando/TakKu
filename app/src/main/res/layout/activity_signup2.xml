@@ -111,10 +111,10 @@
                 android:id="@+id/tv_select_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/select_photo"
-                android:textSize="18sp"
                 android:drawableTop="@drawable/ic_plus_blue"
-                android:drawablePadding="7dp"/>
+                android:drawablePadding="7dp"
+                android:text="@string/select_photo"
+                android:textSize="18sp" />
         </RelativeLayout>
 
         <android.support.design.widget.TextInputLayout
