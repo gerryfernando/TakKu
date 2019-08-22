@@ -25,7 +25,7 @@
         android:id="@+id/tv_signup_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="10dp"
         android:text="@string/signup"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
@@ -39,7 +39,7 @@
         android:id="@+id/ll_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,51 +99,98 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_order">
 
-        <RelativeLayout
-            android:id="@+id/ll_profile_photo"
-            android:layout_width="match_parent"
-            android:layout_height="142dp"
-            android:layout_marginBottom="14dp"
-            android:gravity="center"
-            android:background="@drawable/shape_item">
-
-            <TextView
-                android:id="@+id/tv_select_photo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/select_photo"
-                android:textSize="18sp"
-                android:drawableTop="@drawable/ic_plus_blue"
-                android:drawablePadding="7dp"/>
-        </RelativeLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/et_signup_name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            app:hintEnabled="false">
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
-            <EditText
-                style="@style/TextContent.EditLogin"
-                android:hint="Nama Lengkap"
-                android:inputType="text" />
+            <FrameLayout
+                android:id="@+id/fl_profile_photo"
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                android:background="@drawable/bg_input_satu"
+                android:gravity="center">
 
-        </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/iv_profile_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="142dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dummy_certificate"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_select_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/ic_plus_blue"
+                    android:drawablePadding="7dp"
+                    android:text="@string/select_photo"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/err_profile_photos"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/error_text"
+                android:textColor="@color/orangePrimary"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_name"
+                    style="@style/TextContent.EditLogin"
+                    android:hint="Nama Lengkap"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/err_name"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/error_text"
+                android:textColor="@color/orangePrimary"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
             android:orientation="horizontal">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/et_signup_targettak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="5"
+                android:layout_weight="4"
                 app:hintEnabled="false">
 
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     style="@style/TextContent.EditLogin"
                     android:hint="@string/target_tak"
                     android:inputType="numberDecimal" />
@@ -151,20 +198,22 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
+                android:id="@+id/btn_plus_tak"
                 android:layout_width="wrap_content"
-                android:layout_height="62dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
-                android:background="@drawable/shape_item"
+                android:background="@drawable/bg_input_satu"
                 android:backgroundTint="@color/colorAccent"
                 android:text="+"
                 android:textSize="34sp"
                 android:textColor="#FFF"/>
 
             <Button
+                android:id="@+id/btn_minus_tak"
                 android:layout_width="wrap_content"
-                android:layout_height="62dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
-                android:background="@drawable/shape_item"
+                android:background="@drawable/bg_input_satu"
                 android:backgroundTint="@color/redPrimary"
                 android:text="-"
                 android:textSize="34sp"
@@ -176,11 +225,26 @@
             style="@style/ButtonGeneral"
             android:id="@+id/btn_signup_submit"
             android:backgroundTint="@color/colorAccent"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="Submit"/>
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#0D6d6d6d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
 
     <View

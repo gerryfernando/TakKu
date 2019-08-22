@@ -19,84 +19,95 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/activity_vertical_margins"
-        android:layout_marginEnd="@dimen/activity_vertical_margins"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <ImageView
-            android:id="@+id/iv_certificate"
-            android:layout_width="320dp"
-            android:layout_height="152dp"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:src="@drawable/dummy_certificate"/>
-
-        <TextView
-            style="@style/TextContent.IconTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/event_name"
-            android:textSize="22sp"
-            android:layout_gravity="center"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/grayPrimary"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="30dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/activity_vertical_margins"
+            android:layout_marginEnd="@dimen/activity_vertical_margins"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:id="@+id/iv_certificate"
+                android:layout_width="320dp"
+                android:layout_height="152dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_certificate"/>
 
             <TextView
+                android:id="@+id/tv_event_name"
+                style="@style/TextContent.IconTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/date_event"
-                android:layout_marginBottom="20dp"
-                android:textSize="16sp"
-                android:textColor="#555555"
-                android:layout_gravity="center"
-                android:drawableTop="@drawable/ic_event"
-                android:drawablePadding="10dp"/>
+                android:layout_marginTop="30dp"
+                android:text="@string/event_name"
+                android:textSize="22sp"
+                android:layout_gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/grayPrimary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_event_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_event"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="16sp"
+                    android:textColor="#555555"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/ic_event"
+                    android:drawablePadding="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_event_organizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/organizer"
+                    android:textSize="16sp"
+                    android:textColor="#555555"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/ic_profile"
+                    android:drawablePadding="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/grayPrimary"/>
 
             <TextView
+                android:id="@+id/tv_jumlah_tak_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/organizer"
-                android:textSize="16sp"
-                android:textColor="#555555"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/total_tak"
                 android:layout_gravity="center"
-                android:drawableTop="@drawable/ic_profile"
-                android:drawablePadding="10dp"/>
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"/>
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="40dp"
-            android:background="@color/grayPrimary"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/total_tak"
-            android:layout_gravity="center"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"/>
-
-    </LinearLayout>
-
+    </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

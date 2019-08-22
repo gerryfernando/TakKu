@@ -3,6 +3,7 @@ package com.motion.takku.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +25,7 @@ import java.util.List;
 import java.util.zip.Inflater;
 
 public class HomeFragment extends Fragment {
+    FloatingActionButton fabInputTAK;
     Toolbar mtoolbar;
     private RecyclerView rvDetailTak;
     private List<DetailTAK> mListDetailTAK = new ArrayList<>();
@@ -42,12 +44,31 @@ public class HomeFragment extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("TAK-Ku");
         setHasOptionsMenu(true);
 
+        fabInputTAK = view.findViewById(R.id.fab_home);
+        fabInputTAK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new InputTAKFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
         //init RecyclerView
         rvDetailTak = view.findViewById(R.id.rv_list_tak);
         rvDetailTak.setHasFixedSize(true);
         ListTAKAdapter takAdapter = new ListTAKAdapter(getContext(), mListDetailTAK);
         rvDetailTak.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvDetailTak.setAdapter(takAdapter);
+
+        takAdapter.setOnItemClickCallback(new ListTAKAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(DetailTAK data) {
+                showDetailTAK(data);
+            }
+        });
 
         return view;
     }
@@ -68,6 +89,19 @@ public class HomeFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+    public void showDetailTAK (DetailTAK data) {
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("EXTRA_DETAIL_TAK", data);
+
+            DetailTAKFragment detailTAKFragment = new DetailTAKFragment();
+            detailTAKFragment.setArguments(bundle);
+
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, detailTAKFragment)
+                    .addToBackStack(null)
+                    .commit();
+    }
 
     /*
     @Override

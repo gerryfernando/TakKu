@@ -38,9 +38,14 @@
                 android:id="@+id/bg_profile_picture"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:background="@drawable/fotoprofil"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:id="@+id/iv_profile_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fotoprofil"/>
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -67,6 +72,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_user_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/username_hint"
@@ -78,6 +84,7 @@
 
 
             <TextView
+                android:id="@+id/tv_user_jumlahtak_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/jumlah_tak_status"

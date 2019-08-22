@@ -18,6 +18,7 @@ public class ListTAKAdapter extends RecyclerView.Adapter<ListTAKAdapter.ListView
 
     private Context mContext;
     private List<DetailTAK> mData;
+    private OnItemClickCallback onItemClickCallback;
 
     public ListTAKAdapter(Context mContext, List<DetailTAK> mData) {
         this.mContext = mContext;
@@ -33,8 +34,12 @@ public class ListTAKAdapter extends RecyclerView.Adapter<ListTAKAdapter.ListView
          return viewHolder;
     }
 
+    public void setOnItemClickCallback (OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, final int position) {
         String jumlahTAK = String.valueOf(mData.get(position).getJumlahTak());
         String tak = jumlahTAK + " TAK";
 
@@ -42,14 +47,20 @@ public class ListTAKAdapter extends RecyclerView.Adapter<ListTAKAdapter.ListView
         holder.tvNamaEvent.setText(mData.get(position).getNamaAcara());
         holder.tvTanggalEvent.setText(mData.get(position).getTanggal());
         holder.tvPenyelenggara.setText(mData.get(position).getPenyelenggara());
+        holder.rlDetailTak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallback.onItemClicked(mData.get(holder.getAdapterPosition()));
+            }
+        });
 
 
         if ((position+1) == getItemCount()) {
-            Resources r = mContext.getResources();
-            int px = (int) r.getDisplayMetrics().density;
-            px = 100;
+            int padBottom = 30;
+            final float scale = mContext.getResources().getDisplayMetrics().density;
+            int pad_in_px = (int) (padBottom * scale + 0.5f);
 
-            holder.rlListTak.setPadding(0,0,0, px);
+            holder.rlListTak.setPadding(0,0,0, pad_in_px);
             holder.vLineBawah.setVisibility(View.GONE);
         }
     }
@@ -61,18 +72,23 @@ public class ListTAKAdapter extends RecyclerView.Adapter<ListTAKAdapter.ListView
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
         TextView tvJumlahTAK, tvNamaEvent, tvTanggalEvent, tvPenyelenggara;
-        RelativeLayout rlListTak;
+        RelativeLayout rlListTak, rlDetailTak;
         View vLineBawah;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
 
             rlListTak = itemView.findViewById(R.id.item_list_tak);
+            rlDetailTak = itemView.findViewById(R.id.rl_detail_tak);
             tvJumlahTAK = itemView.findViewById(R.id.tv_jumlah_tak_event);
             tvNamaEvent = itemView.findViewById(R.id.tv_event_name);
             tvTanggalEvent = itemView.findViewById(R.id.tv_event_date);
             tvPenyelenggara = itemView.findViewById(R.id.tv_event_organizer);
             vLineBawah = itemView.findViewById(R.id.v_line_bawah);
         }
+    }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(DetailTAK data);
     }
 }

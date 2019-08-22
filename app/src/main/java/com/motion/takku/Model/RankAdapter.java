@@ -11,7 +11,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.motion.takku.Fragment.EditProfileFragment;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.motion.takku.R;
 
 import java.util.List;
@@ -38,9 +39,10 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.ListViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-
-        holder.ivProfilePicture.setImageResource(mData.get(position).getProfile_image());
-        holder.ivRankLogo.setImageResource(mData.get(position).getRank_logo_image());
+        Glide.with(holder.itemView.getContext())
+                .load(mData.get(position).getProfile_image())
+                .apply(new RequestOptions().override(60, 60))
+                .into(holder.ivProfilePicture);
         holder.tvUsername.setText(mData.get(position).getName());
         holder.tvStatus.setText(mData.get(position).getStatus());
 
@@ -52,11 +54,11 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.ListViewHolder
         holder.tvRankPosition.setText(rankPosition);
 
         if ((position+1) == getItemCount()) {
-            Resources r = mContext.getResources();
-            int px = (int) r.getDisplayMetrics().density;
-            px = 50;
+            int padBottom = 30;
+            final float scale = mContext.getResources().getDisplayMetrics().density;
+            int pad_in_px = (int) (padBottom * scale + 0.5f);
 
-            holder.rlRank.setPadding(0,0,0, px);
+            holder.rlRank.setPadding(0,0,0, pad_in_px);
         }
     }
 
@@ -66,7 +68,7 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.ListViewHolder
     }
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivProfilePicture, ivRankLogo;
+        ImageView ivProfilePicture;
         RelativeLayout rlRank;
         TextView tvUsername, tvStatus, tvJumlahTAK, tvRankPosition;
 
@@ -75,7 +77,6 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.ListViewHolder
 
             rlRank = itemView.findViewById(R.id.item_rank);
             ivProfilePicture = itemView.findViewById(R.id.iv_profile_picture);
-            ivRankLogo = itemView.findViewById(R.id.iv_rank_logo);
             tvUsername = itemView.findViewById(R.id.tv_username);
             tvStatus = itemView.findViewById(R.id.tv_status);
             tvJumlahTAK = itemView.findViewById(R.id.tv_jumlah_tak);

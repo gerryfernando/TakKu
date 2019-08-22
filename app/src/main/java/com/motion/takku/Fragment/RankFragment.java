@@ -56,12 +56,12 @@ public class RankFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mListUser.add(new User("Hamad Fauzi Jesar", R.drawable.fotoprofil, R.drawable.rank_logo, 500, "Superman"));
-        mListUser.add(new User("Firman Ramdhani", R.drawable.fotoprofil, R.drawable.rank_logo, 1000, "The King"));
-        mListUser.add(new User("Yudha Alsepky", R.drawable.fotoprofil, R.drawable.rank_logo, 60, "Senior"));
-        mListUser.add(new User("Restu Assegaf", R.drawable.fotoprofil, R.drawable.rank_logo, 140, "Aktifis"));
-        mListUser.add(new User("Dedih Kurnia", R.drawable.fotoprofil, R.drawable.rank_logo, 480, "Superman"));
-        mListUser.add(new User("John Doe", R.drawable.fotoprofil, R.drawable.rank_logo, 29, "Pemula"));
+        mListUser.add(new User("Hamad Fauzi Jesar", "https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg", 500, "Superman"));
+        mListUser.add(new User("Firman Ramdhani", "https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg", 1000, "The King"));
+        mListUser.add(new User("Yudha Alsepky", "https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg", 60, "Senior"));
+        mListUser.add(new User("Restu Assegaf", "https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg", 140, "Aktifis"));
+        mListUser.add(new User("Dedih Kurnia", "https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg", 480, "Superman"));
+        mListUser.add(new User("John Doe", "https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg", 29, "Pemula"));
 
         Collections.sort(mListUser, new SortbyJumlahTak());
     }

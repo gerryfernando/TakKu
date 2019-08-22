@@ -55,7 +55,7 @@
                     android:layout_marginBottom="14dp"
                     app:hintEnabled="false">
 
-                    <EditText
+                    <android.support.design.widget.TextInputEditText
                         style="@style/TextContent.EditLogin"
                         android:hint="@string/event_name"
                         android:inputType="text" />
@@ -116,7 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="62dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shape_item"
+                        android:background="@drawable/bg_input_satu"
                         android:backgroundTint="@color/colorAccent"
                         android:text="+"
                         android:textColor="#FFF"
@@ -126,7 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="62dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shape_item"
+                        android:background="@drawable/bg_input_satu"
                         android:backgroundTint="@color/redPrimary"
                         android:text="-"
                         android:textColor="#FFF"
@@ -138,7 +138,7 @@
                     android:id="@+id/ll_profile_photo"
                     android:layout_width="match_parent"
                     android:layout_height="152dp"
-                    android:background="@drawable/shape_item"
+                    android:background="@drawable/bg_input_satu"
                     android:gravity="center">
 
                     <TextView

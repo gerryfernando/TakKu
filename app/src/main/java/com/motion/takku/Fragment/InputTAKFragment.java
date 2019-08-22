@@ -26,7 +26,7 @@ public class InputTAKFragment extends Fragment {
 
         mtoolbar = view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(mtoolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Edit Profile");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Input TAK");
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
         mtoolbar.setNavigationOnClickListener(new View.OnClickListener() {

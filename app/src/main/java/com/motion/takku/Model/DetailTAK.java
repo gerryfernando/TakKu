@@ -1,6 +1,9 @@
 package com.motion.takku.Model;
 
-public class DetailTAK {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class DetailTAK implements Parcelable {
     private String namaAcara;
     private String penyelenggara;
     private String tanggal;
@@ -61,4 +64,39 @@ public class DetailTAK {
     public void setImgSertifikat(int imgSertifikat) {
         this.imgSertifikat = imgSertifikat;
     }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.namaAcara);
+        dest.writeString(this.penyelenggara);
+        dest.writeString(this.tanggal);
+        dest.writeInt(this.jumlahTak);
+        dest.writeInt(this.imgSertifikat);
+    }
+
+    protected DetailTAK(Parcel in) {
+        this.namaAcara = in.readString();
+        this.penyelenggara = in.readString();
+        this.tanggal = in.readString();
+        this.jumlahTak = in.readInt();
+        this.imgSertifikat = in.readInt();
+    }
+
+    public static final Parcelable.Creator<DetailTAK> CREATOR = new Parcelable.Creator<DetailTAK>() {
+        @Override
+        public DetailTAK createFromParcel(Parcel source) {
+            return new DetailTAK(source);
+        }
+
+        @Override
+        public DetailTAK[] newArray(int size) {
+            return new DetailTAK[size];
+        }
+    };
 }

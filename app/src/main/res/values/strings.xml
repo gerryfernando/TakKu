@@ -41,4 +41,14 @@
     <string name="dummy_name">Firman Ramdhani</string>
     <string name="dummy_tak">1000 TAK</string>
     <string name="dummy_jumlah_tak">99 TAK</string>
+    <string name="error_text">Error Text</string>
+    <string name="error_text_username_empty">Username is required</string>
+    <string name="error_text_email_empty">Email is required</string>
+    <string name="error_text_email_notvalid">Please enter a valid email address</string>
+    <string name="error_text_pass_empty">Password is required</string>
+    <string name="error_text_pass_minLength">Password must be at least 6 characters</string>
+    <string name="error_text_confpass_notmatch">These password don\'t match</string>
+    <string name="error_text_picture_empty">Profile Picture is required</string>
+    <string name="error_text_name_empty">Name is required</string>
+
 </resources>

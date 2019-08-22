@@ -1,33 +1,44 @@
 package com.motion.takku.Model;
 
-public class User {
+import android.os.Parcel;
+import android.os.Parcelable;
 
+public class User implements Parcelable {
+
+    private String id;
     private String name;
-    private int profile_image;
-    private int rank_logo_image;
+    private String profile_image;
     private int jumlah_tak;
     private String status;
     private String username;
-    private String password;
-    private String email;
     private int tak_target;
 
-    public User(String name, int profile_image, int rank_logo_image, int jumlah_tak, String status, String username, String password, String email, int tak_target) {
+    public User() {
+
+    }
+
+    public User(String profile_image, String id, String name, int jumlah_tak, String status, String username, int tak_target) {
+        this.id = id;
         this.name = name;
         this.profile_image = profile_image;
-        this.rank_logo_image = rank_logo_image;
         this.jumlah_tak = jumlah_tak;
         this.status = status;
         this.username = username;
-        this.password = password;
-        this.email = email;
         this.tak_target = tak_target;
     }
 
-    public User(String name, int profile_image, int rank_logo_image, int jumlah_tak, String status) {
+    public User(String id, String name, int jumlah_tak, String status, String username, int tak_target) {
+        this.id = id;
+        this.name = name;
+        this.jumlah_tak = jumlah_tak;
+        this.status = status;
+        this.username = username;
+        this.tak_target = tak_target;
+    }
+
+    public User(String profile_image, String name, int jumlah_tak, String status) {
         this.name = name;
         this.profile_image = profile_image;
-        this.rank_logo_image = rank_logo_image;
         this.jumlah_tak = jumlah_tak;
         this.status = status;
     }
@@ -40,20 +51,12 @@ public class User {
         this.name = name;
     }
 
-    public int getProfile_image() {
+    public String getProfile_image() {
         return profile_image;
     }
 
-    public void setProfile_image(int profile_image) {
+    public void setProfile_image(String profile_image) {
         this.profile_image = profile_image;
-    }
-
-    public int getRank_logo_image() {
-        return rank_logo_image;
-    }
-
-    public void setRank_logo_image(int rank_logo_image) {
-        this.rank_logo_image = rank_logo_image;
     }
 
     public int getJumlah_tak() {
@@ -80,22 +83,6 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public int getTak_target() {
         return tak_target;
     }
@@ -103,4 +90,50 @@ public class User {
     public void setTak_target(int tak_target) {
         this.tak_target = tak_target;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.id);
+        dest.writeString(this.name);
+        dest.writeString(this.profile_image);
+        dest.writeInt(this.jumlah_tak);
+        dest.writeString(this.status);
+        dest.writeString(this.username);
+        dest.writeInt(this.tak_target);
+    }
+
+    protected User(Parcel in) {
+        this.id = in.readString();
+        this.name = in.readString();
+        this.profile_image = in.readString();
+        this.jumlah_tak = in.readInt();
+        this.status = in.readString();
+        this.username = in.readString();
+        this.tak_target = in.readInt();
+    }
+
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel source) {
+            return new User(source);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 }
