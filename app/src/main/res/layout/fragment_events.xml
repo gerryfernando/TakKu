@@ -1,29 +1,475 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+
+
+    <com.synnapps.carouselview.CarouselView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        </android.support.v7.widget.Toolbar>
-    </android.support.design.widget.AppBarLayout>
+        android:layout_height="200dp"
+        app:pageColor="#00000000"
+        app:fillColor="#fff"
+        app:slideInterval="2000"
+        app:radius="6dp"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"
+        android:id="@+id/carousel"
+        />
+
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Events Fragment"
-        android:textSize="30sp"
-        android:layout_gravity="center"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:layout_marginLeft="50dp"
+        android:text="Seminar"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
 
-</android.support.design.widget.CoordinatorLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_event_sem"
+                    android:layout_width="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="100dp"
+                    android:src="@color/colorPrimaryDark"
+                    />
+                <ImageView
+                    android:id="@+id/img_tak"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:src="@color/colorAccent"
+                    />
+                <TextView
+                    android:id="@+id/jum_tak_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X TAK"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_alignTop="@+id/img_tak"
+                    android:layout_alignLeft="@+id/img_tak"
+                    android:layout_alignRight="@+id/img_tak"
+                    android:layout_alignBottom="@+id/img_tak"
+                    />
+                <TextView
+                    android:id="@+id/tgl_event"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_event"
+                    android:text="   XX XXX XXXX"
+                    android:layout_alignLeft="@+id/img_event_sem"
+                    android:layout_alignRight="@+id/img_event_sem"
+                    android:layout_alignBottom="@+id/img_event_sem"
+                    />
+                <TextView
+                    android:id="@+id/tgl_event"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Seminar Nasional"
+                    android:layout_alignLeft="@+id/img_event_sem"
+                    android:layout_alignRight="@+id/img_event_sem"
+                    android:layout_alignBottom="@+id/img_event_sem"
+                    />
+
+
+            </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_event_sem"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorPrimaryDark" />
+
+                        <ImageView
+                            android:id="@+id/img_tak"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/jum_tak_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_tak"
+                            android:layout_alignTop="@+id/img_tak"
+                            android:layout_alignRight="@+id/img_tak"
+                            android:layout_alignBottom="@+id/img_tak"
+                            android:text="X TAK"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="30dp"
+                            android:drawableLeft="@drawable/ic_event"
+                            android:text="   XX XXX XXXX"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Seminar Nasional"
+                            android:textColor="#fff" />
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="Pelatihan"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_event_sem"
+                            android:layout_width="200dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_height="100dp"
+                            android:src="@color/colorPrimaryDark"
+                            />
+                        <ImageView
+                            android:id="@+id/img_tak"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorAccent"
+                            />
+                        <TextView
+                            android:id="@+id/jum_tak_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X TAK"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/img_tak"
+                            android:layout_alignLeft="@+id/img_tak"
+                            android:layout_alignRight="@+id/img_tak"
+                            android:layout_alignBottom="@+id/img_tak"
+                            />
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="15dp"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_event"
+                            android:text="   XX XXX XXXX"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            />
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="15dp"
+                            android:layout_height="wrap_content"
+                            android:text="Seminar Nasional"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_event_sem"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorPrimaryDark" />
+
+                        <ImageView
+                            android:id="@+id/img_tak"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/jum_tak_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_tak"
+                            android:layout_alignTop="@+id/img_tak"
+                            android:layout_alignRight="@+id/img_tak"
+                            android:layout_alignBottom="@+id/img_tak"
+                            android:text="X TAK"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="30dp"
+                            android:drawableLeft="@drawable/ic_event"
+                            android:text="   XX XXX XXXX"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Seminar Nasional"
+                            android:textColor="#fff" />
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="Open Recruitment"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_event_sem"
+                            android:layout_width="200dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_height="100dp"
+                            android:src="@color/colorPrimaryDark"
+                            />
+                        <ImageView
+                            android:id="@+id/img_tak"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorAccent"
+                            />
+                        <TextView
+                            android:id="@+id/jum_tak_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X TAK"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/img_tak"
+                            android:layout_alignLeft="@+id/img_tak"
+                            android:layout_alignRight="@+id/img_tak"
+                            android:layout_alignBottom="@+id/img_tak"
+                            />
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="15dp"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_event"
+                            android:text="   XX XXX XXXX"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            />
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="15dp"
+                            android:layout_height="wrap_content"
+                            android:text="Seminar Nasional"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_event_sem"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorPrimaryDark" />
+
+                        <ImageView
+                            android:id="@+id/img_tak"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/jum_tak_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_tak"
+                            android:layout_alignTop="@+id/img_tak"
+                            android:layout_alignRight="@+id/img_tak"
+                            android:layout_alignBottom="@+id/img_tak"
+                            android:text="X TAK"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="30dp"
+                            android:drawableLeft="@drawable/ic_event"
+                            android:text="   XX XXX XXXX"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:id="@+id/tgl_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/img_event_sem"
+                            android:layout_alignRight="@+id/img_event_sem"
+                            android:layout_alignBottom="@+id/img_event_sem"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Seminar Nasional"
+                            android:textColor="#fff" />
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
